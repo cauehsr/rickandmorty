@@ -1,0 +1,16 @@
+.parallax-block > h1,
+.parallax-block > h2,
+.parallax-block > h3,
+.parallax-block > p,
+.parallax-item {
+  transform: translateY(150px);
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+
+  @include hide();
+
+  &.parallax-active {
+    transform: translateY(0);
+
+    @include show();
+  }
+}

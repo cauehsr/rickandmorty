@@ -1,0 +1,46 @@
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-arrow-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 50%;
+  margin-left: unset;
+
+  img {
+    width: 17px;
+  }
+}
+
+.hero-arrow__title {
+  display: block;
+  margin: 0 0 0 22px;
+  color: #000;
+  cursor: pointer;
+}
+
+@include min-screen(mq('tablet')) {
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+  }
+
+  .hero-limit {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-arrow-button {
+    width: 30%;
+    margin-bottom: 0;
+    height: 130px;
+  }
+}

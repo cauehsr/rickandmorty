@@ -1,0 +1,134 @@
+.footer__center {
+  background: #f2f2f0;
+  padding: 120px 0 100px;
+}
+
+.footer--title {
+  font-size: 46px;
+  font-family: $BigPro;
+  display: block;
+  margin-bottom: 17px;
+  font-weight: 900;
+
+  @media (max-width: 340px) {
+    font-size: 42px;
+  }
+}
+
+.footer__center-block--text .component--text {
+  font-weight: 100;
+
+  @media (max-width: 340px) {
+    font-size: 13px;
+  }
+}
+
+.footer-button .component--button {
+  color: #0d0d0d;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.footer-button {
+  margin-bottom: 240px;
+  position: relative;
+}
+
+.footer-button:after {
+  content: '';
+  background: rgba(0, 0, 0, 0.2);
+  width: 45%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 150px;
+}
+
+.button-next-image {
+  width: 39px;
+  margin: 1px 0 0 10px;
+  filter: invert(1);
+}
+
+.footer__center-block-info-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__center-block-info-items-item {
+  width: 46%;
+  margin-bottom: 60px;
+}
+
+.footer__center-block-info-items-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-info--title {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+
+.footer-info--text {
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.footer__center-block-info-copyright-image {
+  width: 132px;
+  margin-bottom: 16px;
+}
+
+.footer-copyright--text {
+  color: #b3b3b1;
+  font-size: 12px;
+  display: block;
+  font-weight: 100;
+}
+
+@include min-screen(mq('tablet')) {
+  .footer--title {
+    width: 45%;
+    font-size: 50px;
+  }
+
+  .footer__center-block--text .component--text {
+    margin-top: 25px;
+  }
+
+  .footer-button:after {
+    width: 100%;
+  }
+
+  .footer__center-block-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__center-block-info-items {
+    order: 2;
+    width: 60%;
+  }
+
+  .footer__center-block-info-items-item {
+    width: fit-content;
+  }
+
+  .footer__center-block-info-copyright {
+    order: 1;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@include min-screen(mq('desktop')) {
+  #footer {
+    margin: 0 50px 50px;
+  }
+}

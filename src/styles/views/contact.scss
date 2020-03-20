@@ -1,0 +1,108 @@
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  margin-bottom: 100px;
+  justify-content: space-around;
+
+  @media (max-width: 340px) {
+    padding-top: 85px;
+  }
+}
+
+.contact__center-text--info .component--text {
+  margin: 15px 0;
+  line-height: 20px;
+}
+
+.contact--title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.contact--link {
+  color: rgba(13, 13, 13, 0.5);
+  font-size: 16px;
+}
+
+.contact__center-text--mail {
+  margin-bottom: 50px;
+
+  @media (max-width: 340px) {
+    margin-bottom: 20px;
+  }
+}
+
+.contact-control {
+  border: none;
+  border-bottom: 3px solid #f2f2f0;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-family: $BigPro;
+  padding-bottom: 12px;
+  width: 100%;
+}
+
+.contact-control::placeholder {
+  font-weight: 100;
+  color: #ccccca;
+}
+
+.btn-submit {
+  display: flex;
+  margin-left: auto;
+  font-size: 14px;
+  font-family: $Montserrat;
+  font-weight: 700;
+}
+
+.btn-submit:after {
+  content: '';
+  background: url($base_img+'/arrow-right.svg') no-repeat;
+  background-size: 100%;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  align-items: center;
+  filter: invert(1);
+  margin-left: 18px;
+  position: relative;
+  top: 4px;
+}
+
+@include min-screen(mq('tablet')) {
+  .contact__center-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact__center-text--info {
+    padding-right: 50px;
+    position: relative;
+    width: 56%;
+  }
+
+  .contact__center-text--info:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    display: block;
+    right: 2%;
+    top: -6px;
+  }
+
+  .contact__center-text--mail-items-item {
+    margin-bottom: 20px;
+  }
+  
+  .contact__center-text--mail {
+    margin-bottom: 0;
+  }
+
+  .contact--title {
+    display: block;
+  }
+}
