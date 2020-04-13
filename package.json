@@ -19,11 +19,11 @@
       "git add"
     ],
     "src/**/*.js": [
-      // "eslint",
+      "eslint",
       "git add"
     ],
     "src/**/*.jsx": [
-      // "eslint",
+      "eslint",
       "git add"
     ]
   },
