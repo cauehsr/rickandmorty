@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 
 import CharactersItems from './charactersItems';
+import Loading from './loading';
 
 class Hero extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      characters: []
+      characters: [],
+      loading: true
     };
   }
 
   componentDidMount() {
     this.charactersApi();
+
+    setTimeout(() => {
+      this.setState({ loading: false })
+
+    }, 2000);
   }
 
   charactersApi = () => {
@@ -26,7 +33,7 @@ class Hero extends Component {
   };
 
   render() {
-    const { characters } = this.state;
+    const { characters, loading } = this.state;
 
     return (
       <section id="hero" className={'hero'} ref="hero">
@@ -44,6 +51,7 @@ class Hero extends Component {
             ))}
           </ul>
         </div>
+        <Loading result={require('../lottie/loading.json')} activeStart={loading} />
       </section>
 
     );

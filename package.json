@@ -19,11 +19,11 @@
       "git add"
     ],
     "src/**/*.js": [
-      "eslint",
+      // "eslint",
       "git add"
     ],
     "src/**/*.jsx": [
-      "eslint",
+      // "eslint",
       "git add"
     ]
   },
@@ -39,6 +39,7 @@
     "react": "^16.8.6",
     "react-background-video-player": "^1.1.6",
     "react-dom": "^16.8.6",
+    "react-lottie": "^1.2.3",
     "react-native-video": "^5.0.2",
     "react-redux": "^7.1.0",
     "react-responsive": "^8.0.1",
